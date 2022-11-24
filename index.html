@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cours Git</title>
+  </head>
+  <body>
+    <h1>Exemples d'utilisation de GIT</h1>
+    <br /><br /><br /><br />
+    <h2>Création d'un projet GIT depuis le poste de travail.</h2>
+    <br /><br />
+    <ol>
+      <li>Se placer dans le dossier de travail</li>
+      <li><span>git init</span></li>
+      <li>
+        Créer un README.md <em><u>(pour avoir du contenu)</u></em>
+      </li>
+      <li>
+        Faire un commit <em><u>(commit initial)</u></em>
+      </li>
+      <li>
+        Créer un dépôt git sur GitHub <br />
+        <em>On repasse sur le terminal.</em>
+      </li>
+      <li>
+        <span>git remote add origin URL_DU_DEPOT_DISTANT</span>
+        <em><u>(pour relier les deux)</u> </em>
+      </li>
+      <li><span>git branch -M main</span></li>
+      <li><span>git push -u origin main</span></li>
+    </ol>
+    <strong
+      >Désormais, votre dépôt git local, est relié à votre dépôt git
+      distant</strong
+    >
+    <br />
+    <br />
+    <br />
+    <h2>Création d’un projet GIT depuis GitHub</h2>
+    <ol>
+      <li>Aller sur GitHub.com</li>
+      <li>
+        Créer un nouveau dépôt, en cochant la case pour avoir un README.md
+      </li>
+      <li>Aller sur la page d’accueil du projet</li>
+      <li>
+        Récupérer le lien du dépôt en cliquant sur le bouton
+        <img src="assets\images\github-code-button.png" alt="" />
+      </li>
+      <li>Se placer dans un dossier qui contiendra le dossier de travail</li>
+      <li><span>git clone URL_DU_DEPOT_DISTANT</span></li>
+    </ol>
+    <strong
+      >Le dossier du projet a été créé, il contient la version actuelle du dépôt
+      GitHub (c’est un clone).</strong
+    >
+    <br />
+    <br />
+    <h2>Faire un commit</h2>
+    <ol>
+      <li>
+        <span>git add.</span
+        ><em
+          ><u
+            >(ajoute tous les fichiers du dossiers contenant des modifications
+            au prochain commit)</u
+          ></em
+        >
+      </li>
+      <li>
+        <span>git commit -m « message »</span>
+        <em
+          ><u
+            >(créé une sauvegarde comprenant le contenu des anciens commits +
+            les changement ajoutés avec la commande add).</u
+          ></em
+        >
+      </li>
+    </ol>
+    <h2>Créer une branche</h2>
+    <p>
+      On peut créer une branche en utilisant les commandes : <br /><br />
+      - git branch NOM_DE_LA_BRANCHE <br />
+      - git checkout -b NOM_DE_LA_BRANCHE <br /><br />
+
+      Vous pouvez changer de branche en utilisant
+      <span>git checkout NOM_DE_LA_BRANCHE</span>
+      <br />
+      <br />Attention, on ne peut pas créer de branche dans un dépôt GIT vide
+      (CAD qui ne contient aucun commit).
+    </p>
+    <h2>Récupérer | Envoyer des données avec le dépôt distant</h2>
+    <p>
+      On peut mettre à jour le dépôt local par rapport au dépôt distant avec la
+      commande : <br />
+      <span>git pull</span>
+      <br /><br />
+
+      On peut mettre à jour le dépôt distant par rapport au dépôt avec la
+      commande : <br /><br />
+      <span>git push</span>
+      <br /><br />
+
+      Ces commandes synchronisent les commit si des fichiers locaux ne font
+      partie d’aucun commit, ils ne seront pas envoyés dans le dépôt distant.
+    </p>
+  </body>
+</html>
